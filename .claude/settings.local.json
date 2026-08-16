@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p docs)",
+      "Bash(git mv *)",
+      "Bash(mv note-cadrage-rag-metropt3-maintenance.md docs/note-cadrage-rag-metropt3-maintenance.md)"
+    ]
+  }
+}

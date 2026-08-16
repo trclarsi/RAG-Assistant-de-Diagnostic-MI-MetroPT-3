@@ -1,0 +1,43 @@
+# Environment
+.env
+.venv/
+venv/
+.lock
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Data & artifacts (RAG-specific)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/vector_store/*
+!data/vector_store/.gitkeep
+*.faiss
+*.index
+*.parquet
+!tests/**/*.parquet
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Secrets
+*.pem
+*.key
+credentials.json
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
