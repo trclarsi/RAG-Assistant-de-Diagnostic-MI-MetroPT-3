@@ -4,6 +4,8 @@ Squelette réutilisable pour démarrer un projet RAG (vector, graph, ou hybride)
 
 ## Démarrage rapide
 
+> Si le projet est accédé depuis Windows via un chemin réseau WSL (`\\wsl.localhost\...`), lancer ces commandes depuis un **terminal WSL natif** (pas depuis Windows/Git Bash à travers le partage réseau) : l'installation des dépendances y est nettement plus rapide (hardlink local au lieu de copie fichier par fichier).
+
 ```bash
 cp .env.example .env        # puis remplir les clés/API
 make setup                  # crée le venv (uv) et installe les deps
