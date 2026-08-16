@@ -2,7 +2,6 @@
 .env
 .venv/
 venv/
-.lock
 
 # Python
 __pycache__/
