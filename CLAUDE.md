@@ -58,9 +58,14 @@ data/
 
 ## Git & commits
 
-- Ne jamais committer directement dans `main` sans passer par une branche si le projet a des collaborateurs (solo portfolio : à l'appréciation de l'utilisateur, mais rester cohérent).
 - Un commit = un changement logique cohérent (ingestion, retrieval, eval, etc. séparés si possible).
 - Ne jamais forcer un push, amender un commit déjà partagé, ou utiliser `--no-verify` sans demande explicite de l'utilisateur.
+
+## Flux de travail Git (branche + PR)
+
+- Aucun changement ne se fait directement sur `main`. Créer une branche dédiée (`feat/...`, `fix/...`, `chore/...`) pour tout travail, même petit.
+- Ouvrir une Pull Request vers `main` une fois le travail prêt. Le merge n'a lieu qu'après que la CI (lint, mypy, tests) est passée au vert.
+- Les commandes lourdes en dépendances (`uv sync`, `docker compose up`, exécution de tests avec dépendances installées) doivent être lancées depuis un terminal WSL natif par l'utilisateur, pas via un accès réseau `\\wsl.localhost\...` — cet accès croisé Windows→WSL est nettement plus lent (copie fichier par fichier au lieu de hardlink) et peut bloquer une installation pendant de longues minutes.
 
 ## Workflow d'autorisation avec Claude
 
